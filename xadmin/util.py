@@ -388,7 +388,7 @@ def label_for_field(name, model, model_admin=None, return_attr=False):
                 else:
                     label = field.verbose_name
                 
-                rel_model = field.rel.to
+                rel_model = field.model #field.rel.to
                 rel_label = label_for_field(name, rel_model, model_admin=model_admin, return_attr=return_attr)
                 
                 if return_attr:
